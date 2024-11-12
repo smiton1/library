@@ -20,9 +20,9 @@ function addBookToLibrary() {
 
 }
 
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+const dialog = document.querySelector("#dialogBox");
+const showButton = document.querySelector(".showBtn");
+const closeButton = document.querySelector(".close");
 
 // "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
