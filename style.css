@@ -4,7 +4,11 @@
     font-family: Helvetica, sans-serif;
     box-sizing: border-box;
 }
+h1{
+    color: white;
+    font-size: 48px;
 
+}
 ::backdrop {
     opacity: 0.75;
   }
@@ -25,11 +29,13 @@ input{
    
 }
 .add-btn, .showBtn{
-    padding: 10px 15px;
+    padding: 7px 25px;
     border-radius: 15px;
     border: none;
     background-color: rgb(141, 141, 141);
     color: white;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .close{
@@ -52,7 +58,7 @@ input{
 .books{
     background-color: rgb(141, 141, 141);
 }
-.books>h1{
+.books>div>h1{
     margin:35px 0;
     text-align: center;
 }
@@ -61,4 +67,19 @@ input{
     grid-template-columns: 1fr 3fr;
     height: 100vh;
 
+}
+.card{
+    display: grid;
+    background-color: white;
+    width: 200px;
+    font-size: 25px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid aqua;
+    text-align: center;
+}
+.card-list{
+    list-style: none;
+    display: grid;
 }
