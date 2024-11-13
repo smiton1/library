@@ -38,7 +38,7 @@ input{
     font-weight: bold;
 }
 
-.close{
+.close, .closeBtn{
     border: none;
     text-align: right;
     background-color: aqua;
@@ -70,16 +70,18 @@ input{
 }
 .card{
     display: grid;
+    
     background-color: white;
-    width: 200px;
     font-size: 25px;
     margin: 20px;
     padding: 20px;
     border-radius: 15px;
     border: 1px solid aqua;
-    text-align: center;
+    /* text-align: center; */
 }
 .card-list{
     list-style: none;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
