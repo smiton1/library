@@ -1,9 +1,11 @@
 const myLibrary = [];
-const cardList = document.querySelector("card-list")
+const cardList = document.querySelector(".card-list")
 const form = document.querySelector("form")
 const dialog = document.querySelector("#dialogBox");
 const showButton = document.querySelector(".showBtn");
-const closeButton = document.querySelector(".close");
+const closeButton = document.querySelector(".close");    
+const removeBtn = document.querySelector(".closeBtn");
+const card = document.querySelector(".card");
 
 const addBtn= document.querySelector(".add-btn").addEventListener("click",function(e){
     e.preventDefault()
@@ -22,7 +24,6 @@ function Book(title, author, pages) {
 }
 
 function addBookToLibrary() {
-    const cardList= document.querySelector(".card-list")
     const bookTitle = document.getElementById("title").value
     const bookAuthor = document.getElementById("author").value
     const bookPages= document.getElementById("pages").value
@@ -36,6 +37,9 @@ function addBookToLibrary() {
     author.textContent= `Author: ${bookAuthor}`
     pages.textContent= `Pages: ${bookPages}`
     button.classList.add("closeBtn")
+    button.addEventListener("click",()=>{
+        deleteChild()
+    })
     div.classList.add('card')
     div.append(button)
     div.append(title)
@@ -60,3 +64,11 @@ closeButton.addEventListener("click", ()=>{
         dialog.close();
 
 });
+
+
+
+function deleteChild(){
+    const cardList = document.querySelector(".card-list")
+    const card = document.querySelector(".card");
+    cardList.removeChild(card)
+}

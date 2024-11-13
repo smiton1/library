@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 h1{
-    color: white;
+    color: rgb(141, 141, 141);
     font-size: 48px;
 
 }
@@ -17,25 +17,38 @@ form{
     padding:25px;
     display: flex;
     flex-direction: column;
+    width: auto;
 }
 form>div{
-    margin: 10px;
-    justify-content: space-between;
+    margin: 10px;   
+}
+form>div>input{
+    min-width: none;
+    max-width: 150;
+    border-radius: 15px;
+    padding: 3px;
+    border:1px solid rgb(141, 141, 141);
 }
 form > #titleDiv{
-    justify-content: space-between;
+    justify-content: center;
 }
 input{
    
 }
 .add-btn, .showBtn{
+    box-sizing: content-box;
     padding: 7px 25px;
     border-radius: 15px;
-    border: none;
-    background-color: rgb(141, 141, 141);
-    color: white;
+    border: 1px solid rgb(241, 241, 241);
+    background-color: rgb(241, 241, 241);
+    color: rgb(141, 141, 141);
     font-size: 30px;
     font-weight: bold;
+}
+.add-btn:hover,.showBtn:hover{
+    border: 1px solid black;
+    background-color: rgb(141, 141, 141);
+    color: rgb(241, 241, 241);
 }
 
 .close, .closeBtn{
@@ -56,7 +69,7 @@ input{
     margin-bottom: 35px;
 }
 .books{
-    background-color: rgb(141, 141, 141);
+    background-color: rgb(241, 241, 241);
 }
 .books>div>h1{
     margin:35px 0;
@@ -70,14 +83,13 @@ input{
 }
 .card{
     display: grid;
-    
     background-color: white;
     font-size: 25px;
     margin: 20px;
     padding: 20px;
     border-radius: 15px;
     border: 1px solid aqua;
-    /* text-align: center; */
+
 }
 .card-list{
     list-style: none;
