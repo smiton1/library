@@ -12,13 +12,13 @@ h1{
 ::backdrop {
     opacity: 0.75;
   }
-form{
+/* form{
     margin: 10px;
     padding:25px;
     display: flex;
     flex-direction: column;
     width: auto;
-}
+} */
 form>div{
     margin: 10px;   
 }
@@ -32,10 +32,8 @@ form>div>input{
 form > #titleDiv{
     justify-content: center;
 }
-input{
-   
-}
-.add-btn, .showBtn{
+
+.add-btn, .showBtn, .close, .deleteBtn{
     box-sizing: content-box;
     padding: 7px 25px;
     border-radius: 15px;
@@ -45,18 +43,10 @@ input{
     font-size: 30px;
     font-weight: bold;
 }
-.add-btn:hover,.showBtn:hover{
+.add-btn:hover,.showBtn:hover,.close:hover, .deleteBtn:hover{
     border: 1px solid black;
     background-color: rgb(141, 141, 141);
     color: rgb(241, 241, 241);
-}
-
-.close, .closeBtn{
-    border: none;
-    text-align: right;
-    background-color: aqua;
-    color: white;
-    font-size: 22px;
 }
 
 .sideBar{
@@ -96,4 +86,14 @@ input{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+}
+.dialogBox{
+    border:none;
+    margin:auto;
+    padding:25px;
+    display: flex;
+    flex-direction: column;
+    
+    border-radius:15px;
+    box-shadow: -10px 10px 10px -10px black,  10px -10px 10px -10px black, 10px 10px 10px -10px black, 10px 10px 10px 10px black ;
 }

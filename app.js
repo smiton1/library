@@ -6,16 +6,7 @@ const showButton = document.querySelector(".showBtn");
 const closeButton = document.querySelector(".close");    
 const removeBtn = document.querySelector(".closeBtn");
 const card = document.querySelector(".card");
-
-const addBtn= document.querySelector(".add-btn").addEventListener("click",function(e){
-    e.preventDefault()
-    const bookTitle = document.getElementById("title").value
-    const bookAuthor = document.getElementById("author").value
-    const bookPages= document.getElementById("pages").value
-    let newBook = new Book(bookTitle, bookAuthor, bookPages)
-    myLibrary.push(newBook)
-    addBookToLibrary()
-})
+const addBtn= document.querySelector(".add-btn")
  
 function Book(title, author, pages) {
     this.title=title,
@@ -36,7 +27,7 @@ function addBookToLibrary() {
     title.textContent =`Title: ${bookTitle} `
     author.textContent= `Author: ${bookAuthor}`
     pages.textContent= `Pages: ${bookPages}`
-    button.classList.add("closeBtn")
+    button.classList.add("deleteBtn")
     button.addEventListener("click",()=>{
         deleteChild()
     })
@@ -47,28 +38,30 @@ function addBookToLibrary() {
     div.append(pages)
     cardList.appendChild(div)
 }
-function refresh(){
-    myLibrary.forEach((book)=>{
-
-    })
-}
-
-// "Show the dialog" button opens the dialog modally
-showButton.addEventListener("click", (e) => {
-    e.preventDefault()
-  dialog.showModal();
-});
-
-// "Close" button closes the dialog
-closeButton.addEventListener("click", ()=>{
-        dialog.close();
-
-});
-
-
 
 function deleteChild(){
     const cardList = document.querySelector(".card-list")
     const card = document.querySelector(".card");
     cardList.removeChild(card)
 }
+
+addBtn.addEventListener("click",function(e){
+    e.preventDefault()
+    const bookTitle = document.getElementById("title").value
+    const bookAuthor = document.getElementById("author").value
+    const bookPages= document.getElementById("pages").value
+    let newBook = new Book(bookTitle, bookAuthor, bookPages)
+    myLibrary.push(newBook)
+    addBookToLibrary()
+})
+
+showButton.addEventListener("click", () => {
+    dialog.classList.add("dialogBox")
+    dialog.showModal();
+});
+
+closeButton.addEventListener("click", ()=>{
+    dialog.classList.remove("dialogBox")
+    dialog.close();
+});
+

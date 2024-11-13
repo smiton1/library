@@ -9,9 +9,7 @@
 <body>
     <div class="main">
         <div class="sideBar">
-            <h1>
-                Library
-            </h1>
+            <h1>Library</h1>
             <button class="showBtn">+</button>
         </div>
         <div class="books">
@@ -19,19 +17,14 @@
                 <h1>Books</h1>
             </div>
             <div class="card-list">
-                <!-- <div class="card">
-                    <button class="closeBtn">x</button>
-                        <p>title</p>
-                        <p>author</p>
-                        <p>pages</p>
-                </div> -->
+            <!-- Added books  -->
             </div>
-
-
         </div>
     </div>
+    <!-- pop up window -->
     <dialog id="dialogBox">
         <form action="" class="add">
+            <button autofocus class="close" type="button">x</button>
             <div id="titleDiv">
                 <label for="title">Title:</label>
                 <input type="text" name="title" id="title" >
@@ -46,12 +39,12 @@
             </div>
             <div>
             </div>
-            <button class="add-btn">Add</button>
-            <button autofocus class="close" type="button">x</button>
-            
+            <div>
+                <button class="add-btn">Add</button>
+
+            </div>           
         </form>
       </dialog>
-
       <script src="app.js"></script>
     </body>
 </html>
