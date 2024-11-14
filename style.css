@@ -12,13 +12,7 @@ h1{
 ::backdrop {
     opacity: 0.75;
   }
-/* form{
-    margin: 10px;
-    padding:25px;
-    display: flex;
-    flex-direction: column;
-    width: auto;
-} */
+
 form>div{
     margin: 10px;   
 }
